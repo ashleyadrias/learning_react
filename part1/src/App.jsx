@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const Header = (props) => {
-  console.log(props)
+  //console.log(props)
   return (
     <div>
       <h1>
@@ -12,7 +12,7 @@ const Header = (props) => {
 }
 
 const Part = (props) => {
-  console.log(props)
+  //console.log(props)
   return (
     <div>
       <h2>
@@ -25,7 +25,7 @@ const Part = (props) => {
 
 
 const Content = (props) => {
-  console.log(props)
+  //console.log(props)
   return (
     <div>
       {Array.isArray(props.parts) && props.parts.map((value, index) => (
@@ -36,6 +36,18 @@ const Content = (props) => {
         />
       ))}
     </div>
+  )
+}
+
+const Display = (props) => {
+  return (
+    <div> {props.counter} </div>
+  )
+}
+
+const Button = (props) => {
+  return (
+    <button onClick = {props.onClick}>{props.text}</button>
   )
 }
 
@@ -57,25 +69,36 @@ const App = () => {
     }
   ]
 
+  // define counter state
   const [ counter, setCounter ] = useState(0)
-
+  console.log('rendering with counter value', counter)
+  
+  //separate the event handlers into separate functions
+  const upVote    = () => {
+    console.log('increasing, value before', counter)
+    setCounter(counter + 1)
+  }
+  
+  
+  const downVote  = () => {
+    console.log('decreasing, value before', counter)
+    setCounter(counter - 1)
+  }
+  
+  
+  const resetVote = () => {
+    console.log('resetting to zero, value before', counter)
+    setCounter(0)
+  }
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} /> 
-      {/* <Total parts={parts} /> */}
-      
-      {/* 
-      1. create a counter
-      2. create up button (+1)
-      3. create down button (-1)
-      4. create reset (back to 0)
-      */}
-      <div> {counter} </div>
-      <div><button onClick = {() => setCounter(counter + 1)} ></button> +1 </div>
-      <div><button onClick = {() => setCounter(counter - 1)} ></button> -1 </div>
-      <div><button onClick = {() => setCounter(0)} ></button> reset </div>
+      <Header  course = {course} />
+      <Content parts  = {parts} /> 
+      <Display counter = {counter} />
+      <Button onClick = {upVote} text = '+1'></Button>
+      <Button onClick = {downVote} text = '-1'></Button>
+      <Button onClick = {resetVote} text = 'reset'></Button>
     </div>
   )
 }
