@@ -59,17 +59,23 @@ const App = () => {
 
   const [ counter, setCounter ] = useState(0)
 
-  setTimeout(
-    () => setCounter(counter + 1),
-    1000
-  )
 
   return (
     <div>
       <Header course={course} />
       <Content parts={parts} /> 
       {/* <Total parts={parts} /> */}
-      {counter}
+      
+      {/* 
+      1. create a counter
+      2. create up button (+1)
+      3. create down button (-1)
+      4. create reset (back to 0)
+      */}
+      <div> {counter} </div>
+      <div><button onClick = {() => setCounter(counter + 1)} ></button> +1 </div>
+      <div><button onClick = {() => setCounter(counter - 1)} ></button> -1 </div>
+      <div><button onClick = {() => setCounter(0)} ></button> reset </div>
     </div>
   )
 }
