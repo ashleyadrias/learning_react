@@ -1,9 +1,8 @@
 import Note from './components/Note'
+import Course from './components/Course'
 
 const App = (props) => {
   const notes = props.notes
-
-  console.log(notes)
 
   return (
     <div>
@@ -20,6 +19,8 @@ const App = (props) => {
       <ul>
         {notes.map(note => <Note key={note.id} note={note} />)}
       </ul>
+
+      <Course course={props.course}/>
     </div>
   )
 }
