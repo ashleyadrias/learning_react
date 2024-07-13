@@ -1,28 +1,51 @@
 import Note from './components/Note'
-import Course from './components/Course'
+import {useState} from 'react'
 
 const App = (props) => {
-  const notes = props.notes
 
-  return (
-    <div>
-      <h1>Notes</h1>
-      <p>displayed by manually listing out each note</p>
-      <ul>
-        <li>{notes[0].content}</li>
-        <li>{notes[1].content}</li>
-        <li>{notes[2].content}</li>
-        </ul>
+    // STATES
+    const [notes, setNotes] = useState(props.notes)
 
-      <h1>Notes</h1>
-      <p>displayed using map</p>
-      <ul>
-        {notes.map(note => <Note key={note.id} note={note} />)}
-      </ul>
+    const [newNote, setNewNote] = useState('')
 
-      <Course course={props.course}/>
-    </div>
-  )
+    // EVENT HANDLERS
+    const addNote = (event) => {
+        event.preventDefault()
+        const noteObject = {
+          content: newNote,
+          important: Math.random() < 0.5,
+          id: String(notes.length + 1),
+        }
+      
+        setNotes(notes.concat(noteObject))
+        setNewNote('')
+      }
+
+    const handleNoteChange = (event) => {
+        console.log(event.target.value)
+        setNewNote(event.target.value)
+      }
+
+
+    return (
+        <div>
+            <h1>Notes</h1>
+            <ul>
+                {notes.map(note =>
+                    <Note key={note.id} note={note} />
+                )}
+            </ul>
+
+            <form onSubmit={addNote}>
+                <input 
+                    value={newNote} 
+                    onChange={handleNoteChange}/>
+                <button type="submit">save</button>
+            </form>
+
+        </div>
+
+    )
 }
 
 export default App
