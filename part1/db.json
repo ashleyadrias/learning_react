@@ -15,6 +15,12 @@
         "content": "GET and POST are the most important methods of HTTP protocol",
         "important": true
       }
+    ],
+    "foobar": [
+      {
+        "text":"hello"
+      }
+
     ]
   }
     
