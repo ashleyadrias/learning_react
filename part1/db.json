@@ -19,6 +19,26 @@
       "id": "4",
       "content": "adding new note",
       "important": true
+    },
+    {
+      "id": "5",
+      "content": "adding another new note",
+      "important": false
+    },
+    {
+      "id": "f7d1",
+      "content": "another one",
+      "important": true
+    },
+    {
+      "id": "7",
+      "content": "",
+      "important": true
+    },
+    {
+      "id": "8",
+      "content": "",
+      "important": true
     }
   ],
   "foobar": [
