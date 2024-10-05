@@ -1,0 +1,10 @@
+/* CSS rules comprise of selectors and declarations. 
+The selector defines which elements the rule should be applied to. 
+The selector above is h1, which will match all of the h1 header 
+tags in our application.
+The declaration sets the color property to the value green.
+ */
+
+h1 {
+    color: green;
+  }

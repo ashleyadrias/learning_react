@@ -23,7 +23,7 @@
     {
       "id": "b9ce",
       "content": "new note 2",
-      "important": false
+      "important": true
     },
     {
       "id": "ecfd",
@@ -33,7 +33,7 @@
     {
       "id": "3183",
       "content": "note 2",
-      "important": false
+      "important": true
     },
     {
       "id": "2340",
@@ -43,7 +43,17 @@
     {
       "id": "4a89",
       "content": "note 2",
+      "important": true
+    },
+    {
+      "id": "f6ea",
+      "content": "note 3",
       "important": false
+    },
+    {
+      "id": "b5e2",
+      "content": "note 4",
+      "important": true
     }
   ]
 }
