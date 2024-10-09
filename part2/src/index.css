@@ -5,6 +5,29 @@ tags in our application.
 The declaration sets the color property to the value green.
  */
 
-h1 {
+ h1 {
     color: green;
+    font-style: italic;
+  }
+
+  li {
+    color: grey;
+    padding-top: 3px;
+    font-size: 15px;
+  }
+
+  .note {
+    color: blue;
+    padding-top: 5px;
+    font-size: 15px;
+  }
+
+  .error {
+    color: red;
+    background: lightgrey;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
   }
