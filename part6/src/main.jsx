@@ -1,53 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+// main.jsx or index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client'
+import { Provider } from 'react-redux'; // Import Provider for Redux
+import store from './redux/store'; // Import the Redux store
+import App from './App'; // Import the main App component
 
-import { createStore } from 'redux'
+// Get the root element from the DOM
+const rootElement = document.getElementById('root');
 
-const counterReducer = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    case 'ZERO':
-      return 0
-    default:
-      return state
-  }
-}
+// Create a root using React 18's createRoot API
+const root = ReactDOM.createRoot(rootElement);
 
-const store = createStore(counterReducer)
-
-const App = () => {
-  return (
-    <div>
-      <div>
-        {store.getState()}
-      </div>
-      <button 
-        onClick={e => store.dispatch({ type: 'INCREMENT' })}
-      >
-        plus
-      </button>
-      <button
-        onClick={e => store.dispatch({ type: 'DECREMENT' })}
-      >
-        minus
-      </button>
-      <button 
-        onClick={e => store.dispatch({ type: 'ZERO' })}
-      >
-        zero
-      </button>
-    </div>
-  )
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'))
-
-const renderApp = () => {
-  root.render(<App />)
-}
-
-renderApp()
-store.subscribe(renderApp)
+// Render the app inside the root
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
