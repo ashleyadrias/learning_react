@@ -1,32 +1,26 @@
-// src/redux/reducer.js
-import { INCREMENT, DECREMENT, RESET } from './actions';
+// src/redux/reducer.js or src/redux/reducer.jsx
+import { createSlice } from '@reduxjs/toolkit';
 
-// Define the initial state for the counter
-const initialState = {
-  count: 0, // Initial count value
-};
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: {
+    count: 0,
+  },
+  reducers: {
+    increment: (state) => {
+      state.count += 1;
+    },
+    decrement: (state) => {
+      state.count -= 1;
+    },
+    reset: (state) => {
+      state.count = 0;
+    },
+  },
+});
 
-// Reducer function to handle actions
-const counterReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case INCREMENT: // If the action type is 'INCREMENT'
-      return {
-        ...state,
-        count: state.count + 1, // Increase count by 1
-      };
-    case DECREMENT: // If the action type is 'DECREMENT'
-      return {
-        ...state,
-        count: state.count - 1, // Decrease count by 1
-      };
-    case RESET: // If the action type is 'RESET'
-      return {
-        ...state,
-        count: initialState.count, // Reset to 1
-      };
-    default:
-      return state; // Return the current state if action type is not recognized
-  }
-};
+// Exporting the action creators
+export const { increment, decrement, reset } = counterSlice.actions;
 
-export default counterReducer;
+// Exporting the reducer
+export default counterSlice.reducer;

@@ -1,25 +1,7 @@
 // src/redux/actions.js
 
-// Action types
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
-export const RESET     = 'RESET';
+// Import the action creators from the reducer
+import { increment, decrement, reset } from './reducer';
 
-// Action creators
-export const increment = () => {
-  return {
-    type: INCREMENT, // Action for incrementing the counter
-  };
-};
-
-export const decrement = () => {
-  return {
-    type: DECREMENT, // Action for decrementing the counter
-  };
-};
-
-export const reset = () => {
-    return {
-      type: RESET, // Action for decrementing the counter
-    };
-  };
+// Exporting the actions for use in components
+export { increment, decrement, reset };
