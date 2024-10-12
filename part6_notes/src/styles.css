@@ -1,108 +1,89 @@
 /* styles.css */
 
-/* Set the global font to Roboto */
+/* General styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa; /* Light gray background */
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Arial', sans-serif; /* Modern font */
+  background-color: #f5f5f5; /* Light background for a clean look */
+  color: #333; /* Dark text color for contrast */
+  margin: 0; /* Remove default margin */
+}
+
+/* Header styles */
+header {
+  background-color: #ff5864; /* Tinder-like red color */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Padding for top and bottom */
+  border-bottom: 2px solid #ccc; /* Subtle bottom border */
+}
+
+/* Main content styles */
+main {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: calc(100vh - 160px); /* Adjust height based on header/footer */
+  padding: 20px; /* Padding around the main content */
+}
+
+/* To-do list container */
+.todo-list {
+  background-color: white; /* White background for the list */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the list container */
+  width: 100%; /* Full width */
+  max-width: 500px; /* Maximum width for a nice layout */
+}
+
+/* To-do item styles */
+.todo-item {
+  display: flex; /* Flex layout for each item */
+  justify-content: space-between; /* Space between text and buttons */
+  align-items: center; /* Center vertically */
+  padding: 10px 0; /* Padding for each item */
+  border-bottom: 1px solid #eee; /* Bottom border for separation */
+}
+
+.todo-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+/* Button styles */
+button {
+  background-color: #ff5864; /* Tinder-like button color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 15px; /* Padding inside buttons */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #e24a5d; /* Darker shade on hover */
+}
+
+/* Footer styles */
+footer {
+  background-color: #ff5864; /* Tinder-like red color */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center text */
+  padding: 15px 0; /* Padding for top and bottom */
+  border-top: 2px solid #ccc; /* Subtle top border */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header, footer {
+      padding: 15px 0; /* Reduce padding on smaller screens */
   }
-  
-  .container {
-    max-width: 600px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
+
+  .todo-list {
+      padding: 15px; /* Adjust padding for smaller screens */
   }
-  
-  h1 {
-    font-weight: 500;
-    font-size: 2rem;
-    color: #343a40; /* Dark gray */
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    font-size: 1rem;
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border: 1px solid #ced4da; /* Bootstrap border */
-    border-radius: 8px;
-  }
-  
+
   button {
-    font-size: 1rem;
-    padding: 10px 20px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+      padding: 8px 12px; /* Adjust button padding */
   }
-  
-  button.add-task-btn {
-    background-color: #28a745; /* Bootstrap green */
-    color: white;
-  }
-  
-  button.add-task-btn:hover {
-    background-color: #218838;
-  }
-  
-  button.complete-btn {
-    background-color: #007bff; /* Bootstrap blue */
-    color: white;
-  }
-  
-  button.complete-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  button.remove-btn {
-    background-color: #dc3545; /* Bootstrap red */
-    color: white;
-    margin-left: 10px;
-  }
-  
-  button.remove-btn:hover {
-    background-color: #c82333;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 15px;
-    background-color: #f1f3f5;
-    margin: 10px 0;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  li.completed {
-    text-decoration: line-through;
-    background-color: #e9ecef;
-  }
-  
-  h3 {
-    font-weight: 500;
-    color: #495057; /* Gray */
-  }
-  
-  p {
-    font-size: 0.9rem;
-    color: #6c757d; /* Light gray */
-    margin: 0;
-  }
+}
