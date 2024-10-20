@@ -1,0 +1,39 @@
+/* src/styles/Navbar.css */
+.navbar {
+    width: 100%;
+    height: 96px;
+    background: #f4f4f4;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .wordmark .logo-text {
+    font-size: 24px;
+    color: #605dec;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0px 10px;
+  }
+  
+  .nav-navigation-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .sign-up-btn {
+    background-color: #605dec;
+    color: #fafafa;
+    border: none;
+    padding: 12px 20px;
+    margin: 0px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    cursor: pointer;
+  }
+  
+  .sign-up-btn:hover {
+    background-color: #4a45d1;
+  }

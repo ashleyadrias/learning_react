@@ -1,0 +1,23 @@
+/* src/styles/NavItem.css */
+.nav-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .nav-list-item .label {
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #7c8db0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list-item:hover .label {
+    color: #605dec;
+  }
+  
+  .nav-list-item.active .label {
+    color: #605dec;
+  }

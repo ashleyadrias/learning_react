@@ -1,0 +1,129 @@
+/* src/styles/styleguide.css */
+
+/* 1. Global Styles */
+
+/* Use box-sizing border-box to include padding and borders in the element's total width and height */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f4f4f4; /* Light background color for the body */
+    color: #333;               /* Default text color */
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* 2. Colors (Variables for consistency) */
+  :root {
+    --primary-color: #605dec; /* Primary color for your brand */
+    --secondary-color: #7c8db0; /* Secondary color */
+    --background-color: #fafafa; /* Background color */
+    --text-color: #333; /* Default text color */
+    --button-bg: #605dec;
+    --button-hover-bg: #4a45d1;
+    --button-text-color: #fafafa;
+  }
+  
+  /* 3. Typography */
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  /* Paragraphs */
+  p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 4. Spacing (using padding and margin classes for consistency) */
+  .spacing-top {
+    margin-top: 20px;
+  }
+  
+  .spacing-bottom {
+    margin-bottom: 20px;
+  }
+  
+  .spacing-left {
+    margin-left: 20px;
+  }
+  
+  .spacing-right {
+    margin-right: 20px;
+  }
+  
+  .spacing-horizontal {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .spacing-vertical {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* 5. Buttons */
+  .button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .button:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  /* 6. Forms */
+  input, select, textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  /* 7. Flexbox and Layout Helpers */
+  
+  /* Flex container */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Centered container */
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
