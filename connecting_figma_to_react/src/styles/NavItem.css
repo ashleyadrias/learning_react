@@ -5,6 +5,7 @@
     align-items: center;
     padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover */
   }
   
   .nav-list-item .label {
@@ -14,10 +15,16 @@
     transition: color 0.3s ease;
   }
   
+  /* Hover effect: Change text color and optional background color */
+  .nav-list-item:hover {
+    background-color: #f0f0f5; /* Optional background color on hover */
+  }
+  
   .nav-list-item:hover .label {
     color: #605dec;
   }
   
+  /* Active state for nav items */
   .nav-list-item.active .label {
     color: #605dec;
   }

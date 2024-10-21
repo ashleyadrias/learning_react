@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "projects": [
+        {
+          "id": 1,
+          "name": "Project 1",
+          "subProjects": [
+            "Sub-project 1.1",
+            "Sub-project 1.2"
+          ],
+          "chat": [
+            {
+              "sender": "user",
+              "text": "How do I start this project?"
+            },
+            {
+              "sender": "GPT",
+              "text": "To start, break down your tasks into smaller steps. What's the first step you want to tackle?"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Project 2",
+          "subProjects": [
+            "Sub-project 2.1",
+            "Sub-project 2.2"
+          ],
+          "chat": [
+            {
+              "sender": "user",
+              "text": "What tools should I use for this?"
+            },
+            {
+              "sender": "GPT",
+              "text": "For this project, I recommend using React for the frontend and Node.js for the backend."
+            }
+          ]
+        },
+        {
+          "id": 1729479161172,
+          "name": "Project 3"
+        }
+      ]
+    }
+  ]
+}

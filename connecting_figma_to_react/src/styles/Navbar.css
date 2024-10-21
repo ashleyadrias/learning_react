@@ -1,39 +1,108 @@
-/* src/styles/Navbar.css */
+/* General Navbar Styles */
 .navbar {
-    width: 100%;
-    height: 96px;
-    background: #f4f4f4;;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
-  
-  .wordmark .logo-text {
-    font-size: 24px;
-    color: #605dec;
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0px 10px;
-  }
-  
+  width: 100%;
+  height: 96px;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.wordmark .logo-text {
+  font-size: 24px;
+  color: #605dec;
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0px 30px;
+}
+
+.nav-navigation-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #7c8db0;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #f0f0f5;
+  color: #605dec;
+}
+
+.nav-item.active {
+  color: #605dec;
+  font-weight: bold;
+}
+
+.sign-up-btn {
+  background-color: #605dec;
+  color: #fafafa;
+  border: none;
+  padding: 12px 20px;
+  margin: 0px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background-color: #4a45d1;
+}
+
+/* Hamburger button styling */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* Hide the navigation menu by default on small screens */
   .nav-navigation-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 96px; /* Right below the navbar */
+    right: 0;
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Show the nav menu when open */
+  .nav-navigation-menu.open {
     display: flex;
-    align-items: center;
-    gap: 16px;
   }
-  
+
+  /* Display the hamburger on small screens */
+  .hamburger {
+    display: block;
+  }
+
+  /* Align menu items for mobile view */
+  .nav-item {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; /* Make nav items take up full width */
+  }
+
   .sign-up-btn {
-    background-color: #605dec;
-    color: #fafafa;
-    border: none;
-    padding: 12px 20px;
-    margin: 0px 10px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-family: 'Nunito Sans', sans-serif;
-    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
   }
-  
-  .sign-up-btn:hover {
-    background-color: #4a45d1;
-  }
+}
