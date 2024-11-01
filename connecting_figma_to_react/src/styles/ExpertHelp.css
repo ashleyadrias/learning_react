@@ -1,0 +1,123 @@
+/* Overall layout of the ExpertHelp page */
+.chat-page {
+  display: flex;
+  height: calc(100vh - 96px); /* Subtract the height of the navbar (96px) */
+  flex-direction: row;
+  background-color: #f7f7f7; /* Light gray background for a clean look */
+  font-family: 'Arial', sans-serif; /* Modern sans-serif font */
+}
+
+/* Sidebar */
+.project-list {
+  width: 250px; /* Sidebar width */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the sidebar */
+  border-right: 1px solid #ddd; /* Subtle border to separate sidebar */
+  overflow-y: auto; /* Allow sidebar content to scroll */
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for the sidebar */
+}
+
+/* Chat area container */
+.chat-area {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push the chat content down */
+  background-color: #ffffff;
+  border-left: none;
+  border-radius: 8px; /* Rounded corners for smooth edges */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for the chat area */
+}
+
+/* Chat messages container */
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 20px; /* Space between messages and input */
+  font-size: 14px; /* Slightly smaller font size for a more spacious feel */
+  color: #333; /* Dark gray text for easy reading */
+  line-height: 1.6;
+  max-height: 75vh; /* Allow a maximum height for messages */
+}
+
+/* Individual chat messages */
+.chat-message {
+  margin-bottom: 12px;
+}
+
+.chat-message.User {
+  text-align: right;
+  color: #605dec; /* Purple color for user messages */
+}
+
+.chat-message.Bot {
+  text-align: left;
+  color: #333; /* Dark text for bot messages */
+}
+
+/* Placeholder text */
+.placeholder {
+  font-size: 18px;
+  color: #888;
+}
+
+/* Chat input area */
+.chat-input {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-radius: 8px; /* Rounded input area */
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.chat-input input:focus {
+  outline: none;
+  border-color: #605dec; /* Purple border on focus */
+}
+
+.chat-input button {
+  padding: 12px 20px;
+  background-color: #605dec;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chat-input button:hover {
+  background-color: #4a45d1; /* Darker purple on hover */
+}
+
+/* Sidebar elements */
+.project-list .project-item {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.project-list .project-item:hover {
+  background-color: #f0f0f0; /* Light gray hover effect */
+}
+
+.project-list .project-item.active {
+  background-color: #605dec;
+  color: #fff;
+}
